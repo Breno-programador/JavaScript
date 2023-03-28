@@ -1,16 +1,18 @@
 function verificar() {
-    var numero = Number(document.getElementById(`numero1`).value)
+    var numero1 = Number(document.getElementById(`numero1`).value)
     var numero2 = Number(document.getElementById(`numero2`).value)
     var numero3 = Number(document.getElementById(`numero3`).value)
 
-    if (numero > numero2 || numero3) { document.getElementById(`conclusao`).innerHTML = `<p>O número ${numero} é maior</p>`
-        if (numero > numero3) { document.getElementById(`conclusao`).innerHTML = `<p>O número ${numero} é maior</p>`
-        } else {
-            document.getElementById(`conclusao`).innerHTML = `<p>O número ${numero2} é maior</p>`
-        }
+    var maior = numero1
+
+    if (numero1 == numero2 && numero1 == numero3) {
+        conclusao.innerHTML = `<p>Os números são iguais.</p>`
     } else {
-        document.getElementById(`conclusao`).innerHTML = `<p>O número ${numero2} é maior</p>`
+        if (numero2 > maior && numero2 > numero3) {
+            maior = numero2
+        } else if (numero3 > maior) {
+            maior = numero3
+        }
+        conclusao.innerHTML = `<p>O maior número é o ${maior}</p>`
     }
 }
-
-
