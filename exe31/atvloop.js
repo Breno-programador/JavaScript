@@ -1,7 +1,10 @@
+/* var c = 1
 for (var cont = 1; cont <= 5; cont++) {
     console.log(`#### Loop ####`)
-    while (cont <= 5) {
-        console.log(`Passo ${cont}`)
-        cont++
+    while (c <= 5) {
+        console.log(`Passo ${c}`)
+        c++
     } 
-}
+} */
+var vezes = 1
+while
