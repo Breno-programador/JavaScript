@@ -6,5 +6,7 @@ for (var cont = 1; cont <= 5; cont++) {
         c++
     } 
 } */
-var vezes = 1
+
+/* var vezes = 1
 while
+ */
