@@ -1,0 +1,24 @@
+@charset "UTF8";
+
+body{
+    background-color: rgb(98, 192, 255);
+}
+#primeiroh1{
+    color: white;
+    text-align: center;
+}
+#divconteudo{
+    width: 600px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 33%;
+    margin-right: 30%;
+    box-shadow: 1px 5px 15px 0px;
+}
+#footer{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
