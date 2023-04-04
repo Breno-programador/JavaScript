@@ -1,11 +1,19 @@
 function contador() {
-    var inicio = Number(document.getElementById(`numeroinicial`).value)
-    var fim = Number(document.getElementById(`numerofinal`).value)
-    var passo = Number(document.getElementById(`numerodepasso`))
+    var inicio = Number(document.getElementById(`inicio`).value)
+    var fim = Number(document.getElementById(`fim`).value)
+    var passo = Number(document.getElementById(`passo`).value)
 
-    var result = inicio + fim
-
-    var resultado =document.getElementById(`contando`)
-
-    resultado.innerHTML = `a soma de ${inicio} e ${fim} é igual a ${result}`
+    var resultado = document.getElementById(`contando`)
+    resultado.innerHTML = ""
+    if (passo <= 0) {
+        resultado.innerHTML = `O passo não pode ser 0 ou menor.`
+    } else if(inicio < fim) {
+        resultado.innerHTML += `${inicio}`
+        inicio += passo
+    } else {
+        while (inicio <= fim) {
+        resultado.innerHTML += `${inicio}`
+        inicio += passo
+    }
+}
 }
