@@ -3,17 +3,26 @@ function contador() {
     var fim = Number(document.getElementById(`fim`).value)
     var passo = Number(document.getElementById(`passo`).value)
 
-    var resultado = document.getElementById(`contando`)
     resultado.innerHTML = ""
     if (passo <= 0) {
-        resultado.innerHTML = `O passo não pode ser 0 ou menor.`
-    } else if(inicio < fim) {
-        resultado.innerHTML += `${inicio}`
-        inicio += passo
-    } else {
+        resultado.innerHTML = `<strong>O passo não pode ser 0 ou menor que 0.</strong>`
+    } else if (inicio < fim) {
         while (inicio <= fim) {
-        resultado.innerHTML += `${inicio}`
-        inicio += passo
+            if (inicio + passo > fim) {
+                resultado.innerHTML += `${inicio}\u{1F3C1}`
+            } else {
+                resultado.innerHTML += `${inicio}\u{27A1}`
+            }
+            inicio += passo
+        }
+    } else {
+        while (inicio >= fim) {
+            if (inicio - passo < fim) {
+                resultado.innerHTML += `${inicio}\u{1F3C1}`
+            } else {
+                resultado.innerHTML += `${inicio}\u{27A1}`
+            }
+            inicio -= passo
+        }
     }
-}
 }
