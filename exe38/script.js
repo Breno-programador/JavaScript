@@ -7,6 +7,7 @@ function cadastrar() {
         nomes.push(nome.value)
         nomes.value = `` // Vai limpar o campo para digitar um novo nome.
         nomes.focus() // Vai deixar o curso piscando dentro do campo nome.
+        if (blablabla){}
     } else {
         alert(`Digite o nome do aluno.`)
         nome.focus()
