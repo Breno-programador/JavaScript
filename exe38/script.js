@@ -4,11 +4,14 @@ var lista = document.getElementById(`lista`)
 
 function cadastrar() {
     if (nome.value != ``) {
-        nomes.push(nome.value)
-        nomes.value = `` // Vai limpar o campo para digitar um novo nome.
-        nomes.focus() // Vai deixar o curso piscando dentro do campo nome.
-        if (blablabla){}
-    } else {
+        if (nomes.push(nome.value) == -1) {
+            nomes.value = `` // Vai limpar o campo para digitar um novo nome.
+            nomes.focus() // Vai deixar o curso piscando dentro do campo nome.)
+        } else {
+           alert(`O nome ${nome.value} já foi cadastrado.`)
+           nome.focus()
+        }
+} else {
         alert(`Digite o nome do aluno.`)
         nome.focus()
     }
