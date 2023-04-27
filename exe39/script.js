@@ -48,11 +48,11 @@ function finalizar() {
         }
         media = soma / tot
         res.innerHTML = ''
-        res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
-        res.innerHTML += `<p>O maior valor cadastrado foi ${maior}</p>`
-        res.innerHTML +=  `<p>O menor valor cadastrado foi ${menor}</p>`
-        res.innerHTML += `<p>A soma de todos os valores é igual a ${soma}</p>`
-        res.innerHTML += `<p>A média dos valores digitados é ${media}</>`
+        res.innerHTML += `<p>Ao todo, temos <strong><mark>${tot}</mark></strong> números cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor cadastrado foi <strong><mark>${maior}</mark></strong>.</p>`
+        res.innerHTML +=  `<p>O menor valor cadastrado foi <strong><mark>${menor}</mark></strong>.</p>`
+        res.innerHTML += `<p>A soma de todos os valores é igual a <strong><mark>${soma}</mark></strong>.</p>`
+        res.innerHTML += `<p>A média dos valores digitados é <strong><mark>${media}</mark></strong>.</>`
     }
 }
 function limpar() {
